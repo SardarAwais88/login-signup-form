@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #004a9d;
+}
+
+.container {
+    width: 350px;
+    height: 380px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-box {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    
+}
+
+.button-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    width: 50%;
+    padding: 10px 0;
+    background-color: lightgray;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    color: black;
+    border-radius: 10px;
+}
+
+.toggle-btn.active {
+    background-color: #004a9d;
+    color: white;
+}
+
+.input-group {
+    display: none;
+    width: 100%;
+    
+}
+
+.input-group.show {
+    display: block;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    border-radius: 10px;
+}
+
+.input-field:focus {
+    border-color: #004a9d;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #004a9d;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #003773;
+}
+
+.forgot-pass {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    color: #004a9d;
+    margin-bottom: 20px;
+}
+
+.not-member {
+    margin-top: 10px;
+}
+
+.not-member a {
+    color: #004a9d;
+    text-decoration: none;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2>Login Form</h2>
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="showLogin()" id="login-btn">Login</button>
+                <button type="button" class="toggle-btn" onclick="showSignup()" id="signup-btn">Signup</button>
+            </div>
+            <form id="login" class="input-group">
+                <input type="email" class="input-field" placeholder="Email Address" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <a href="#" class="forgot-pass">Forgot password?</a>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <form id="signup" class="input-group">
+                <input type="email" class="input-field" placeholder="Email Address" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <button type="submit" class="submit-btn">Signup</button>
+            </form>
+            <p class="not-member">Not a member? <a href="#" onclick="showSignup()">Signup now</a></p>
+        </div>
+    </div>
+
+    <script>
+        var loginForm = document.getElementById("login");
+        var signupForm = document.getElementById("signup");
+        var loginBtn = document.getElementById("login-btn");
+        var signupBtn = document.getElementById("signup-btn");
+
+        function showLogin() {
+            loginForm.style.display = "block";
+            signupForm.style.display = "none";
+            loginBtn.classList.add("active");
+            signupBtn.classList.remove("active");
+        }
+
+        function showSignup() {
+            loginForm.style.display = "none";
+            signupForm.style.display = "block";
+            signupBtn.classList.add("active");
+            loginBtn.classList.remove("active");
+        }
+
+        // Show login by default
+        showLogin();
+    </script>
+</body>
+</html>
